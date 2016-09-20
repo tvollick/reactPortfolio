@@ -2,6 +2,7 @@ var React = require('react');
 var Reflux = require('reflux'); 
 var Actions = require('../actions'); 
 var singleProjectStore = require('../stores/single-project-store'); 
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group'); 
 
 module.exports = React.createClass({
 	mixins: [Reflux.listenTo(singleProjectStore, 'onStoreChange')], 
@@ -13,12 +14,18 @@ module.exports = React.createClass({
 	},
 	render: function () {
 		return <div className="single-project-container"> 
-			{this.renderProject()}
+			<ReactCSSTransitionGroup
+				transitionName="portfolio"
+				transitionEnterTimeout={1500}
+				transitionLeaveTimeout={500}
+			>
+				{this.renderProject()}
+			</ReactCSSTransitionGroup> 
 		</div> 
 	}, 
 	renderProject: function () { 
 		if (this.state.project) { 
-			return <div className="single-project"> 
+			return <div className="single-project" key={this.state.project.id}> 
 				<h1> {this.state.project.title.rendered}</h1>
 			</div> 
 		}

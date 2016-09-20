@@ -1,0 +1,29 @@
+#portfolio { 
+	padding: 15px; 
+	background-color: #bdc3c7; 
+	transition: all .5s ease-in; 
+	min-height: 100vh; 
+}
+/*ANIMATIONS*/
+.portfolio-enter { 
+	opacity: 0.01; 
+}
+.portfolio-enter.portfolio-enter-active { 
+	opacity: 1; 
+	transition: opacity 1500ms ease-in; 
+}
+.portfolio-leave { 
+	opacity: 1; 
+}
+.portfolio-leave.portfolio-leave-active { 
+	opacity: 0.01; 
+	transition: opacity 300ms ease-in; 
+}
+.portfolio-appear {
+  opacity: 0.01;
+}
+
+.portfolio-appear.portfolio-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
