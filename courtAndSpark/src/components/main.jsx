@@ -1,12 +1,13 @@
 var React = require('react'); 
 var Header = require('./header'); 
 var ProjectList = require('./project-list'); 
+var Portfolio = require('./portfolio'); 
 
 module.exports = React.createClass({
 	render: function () {
 		return <div className="main-container"> 
 			<Header /> 
-			{this.content()}
+				{this.content()}
 		</div> 
 	}, 
 	content: function () {
@@ -14,7 +15,7 @@ module.exports = React.createClass({
 			return this.props.children
 		} else { 
 			// change his to home page. 
-			return <ProjectList /> 
+			return <Portfolio /> 
 		}
 	}
-})
+}); 

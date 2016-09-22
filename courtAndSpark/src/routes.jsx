@@ -11,4 +11,4 @@ module.exports = (
 			<Route path="projects/:id" component={Project} /> 
 		</Route>
 	</Router> 
-)
+); 

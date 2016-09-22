@@ -13,3 +13,32 @@
 body { 
 	margin: 0px; 
 }
+
+.route-enter { 
+  animation: slideUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.route-enter.route-enter-active { 
+}
+.route-leave { 
+	opacity: 1; 
+}
+.route-leave.route-leave-active { 
+}
+.route-appear {
+  animation: slideUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+@keyframes slideUp { 
+	0% { 
+		opacity: 0; 
+		transform: translate3d(0, 50px, 0); 
+	}
+	100% {
+		opacity: 1; 
+		transform: translate3d(0, 0, 0); 
+
+	}
+}
+.route-appear.route-appear-active {
+  opacity: 1;
+  transition: opacity .6 ease-in;
+}

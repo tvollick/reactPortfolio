@@ -13,21 +13,24 @@ module.exports = React.createClass({
 		Actions.getProjectById(this.props.params.id); 
 	},
 	render: function () {
-		return <div className="single-project-container"> 
-			<ReactCSSTransitionGroup
-				transitionName="portfolio"
-				transitionEnterTimeout={1500}
-				transitionLeaveTimeout={500}
+		return <ReactCSSTransitionGroup
+				component="div"
+				transitionName="route"
+				transitionEnterTimeout={600}
+				transitionLeaveTimeout={600}
+				transitionAppear={true}
+				transitionAppearTimeout={600}
 			>
-				{this.renderProject()}
-			</ReactCSSTransitionGroup> 
-		</div> 
+					{this.renderProject()}
+		</ReactCSSTransitionGroup>
 	}, 
 	renderProject: function () { 
 		if (this.state.project) { 
-			return <div className="single-project" key={this.state.project.id}> 
-				<h1> {this.state.project.title.rendered}</h1>
-			</div> 
+			return 	<div className="single-project-container" key={this.props.params.id}> 
+				<div className="single-project" key={this.state.project.id}> 
+					<h1> {this.state.project.title.rendered}</h1>
+				</div> 
+			</div>
 		}
 	}, 
 	onStoreChange: function (event, project) { 

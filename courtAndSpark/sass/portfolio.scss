@@ -1,9 +1,32 @@
+$bp-tablet: 768px; 
 #portfolio { 
 	padding: 15px; 
 	background-color: #bdc3c7; 
 	transition: all .5s ease-in; 
 	min-height: 100vh; 
 }
+
+.portfolio-box { 
+	height: 500px; 
+
+	.portfolio-info { 
+		padding: 30px; 
+		background-color: rgba(0,0,0,0.4); 
+		color: white
+	}
+}
+@media (min-width: $bp-tablet) { 
+	.portfolio-box { 
+		width: 50%; 
+		float: left; 
+	}
+}
+
+.portfolio-box-link:first-child .portfolio-box { background-color: #2c3e50}
+.portfolio-box-link:nth-child(2n) .portfolio-box { background-color:#7f8c8d }
+.portfolio-box-link:nth-child(3n) .portfolio-box { background-color:#8e44ad }
+.portfolio-box-link:nth-child(4n) .portfolio-box { background-color:#bdc3c7 }
+
 /*ANIMATIONS*/
 .portfolio-enter { 
 	opacity: 0.01; 
@@ -25,5 +48,5 @@
 
 .portfolio-appear.portfolio-appear-active {
   opacity: 1;
-  transition: opacity .5s ease-in;
+  transition: opacity 5s ease-in;
 }
