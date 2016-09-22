@@ -1,0 +1,18 @@
+.heart-svg-container { 
+	width: 300px; 
+	padding: 100px; 
+}
+.heart-svg { padding: 15px;}
+.heart-svg path { 
+	fill: transparent; 
+	stroke: red; 
+	stroke-width: 2px; 
+	stroke-dasharray: 514.2344970703125px; 
+	stroke-dashoffset: -514.2344970703125px; 
+	transition: stroke-dashoffset 0.5s linear 0.4s, fill 0.4s ease; 
+}
+.heart-svg.checked path { 
+	fill: #ff7bac; 
+	stroke-dashoffset: 0px; 
+	transition: stroke-dashoffset 0.5s linear, fill 0.4s ease 0.5s; 
+}
