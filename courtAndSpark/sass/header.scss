@@ -4,20 +4,30 @@
 	color: white;
 	position: relative; 
 	.side-nav-trigger { 
-		width: 80px; 
-		height: 80px; 
+		width: 40px; 
+		height: 40px; 
 		background-color: #27ae60; 
 		top: 15px;
 		left: 15px; 
 		position: absolute;  
 	}
-	.logo { 
-		display: block;
+
+	.title { 
 		float: left; 
-		padding: 15px; 
-		color: #fff; 
-		text-decoration: none; 
-		font-size: 36px; 
+
+		.logo { 
+			display: inline; 
+			color: #fff; 
+			text-decoration: none; 
+			font-size: 36px; 
+			line-height: 1em; 
+		}
+		.tagline { 
+			display: inline; 
+			color: #fff; 
+			text-decoration: none; 
+			padding: 15px; 
+		}
 	}
 
 	.nav {

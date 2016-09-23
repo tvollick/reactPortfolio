@@ -57,7 +57,7 @@ module.exports = React.createClass({
 			return <li> 
 				<span className="key">{field.key}</span>
 				<span className="colon">:</span> 
-				<span className="val">{' "'+field.val}</span>
+				<span className="val">{' "'+field.val+'"'}</span>
 				<span className="comma">,</span>
 			</li> 
 		}.bind(this))

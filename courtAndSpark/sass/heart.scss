@@ -26,3 +26,41 @@
     fill: #ff7bac; 
   }
 }
+
+
+.skills-svg { 
+
+  text { display: none; }
+
+  .cls-8{
+    fill:none;
+    stroke: #e67e22;  
+    stroke-width: 3px; 
+
+    &.line-1 { 
+      stroke-dasharray: 220.4900016784668px; 
+      animation: linePipe1 3s ease infinite;
+    }
+    &#line-2 { 
+      stroke-dasharray: 302.48996353149414px; 
+      animation: linePipe2 3s ease infinite;
+    }
+  }  
+}
+
+@keyframes linePipe1 { 
+  0% { 
+    stroke-dashoffset: 220.4900016784668px;
+  } 
+  100% { 
+    stroke-dashoffset: 0; 
+  }
+}
+@keyframes linePipe2 { 
+  0% { 
+    stroke-dashoffset: 302.48996353149414px;
+  } 
+  100% { 
+    stroke-dashoffset: 0; 
+  }
+}

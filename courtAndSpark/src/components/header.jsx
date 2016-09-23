@@ -23,9 +23,14 @@ module.exports = React.createClass({
 			</div> 
 			<div className="container-fixed"> 
 				<Link to="/">
-					<div className="logo">
-						Tyler Vollick
-					</div>
+					<div className="title"> 
+						<div className="logo">
+							Tyler Vollick
+						</div>
+						<span className="tagline"> 
+							Front End Developer 
+						</span> 
+					</div> 
 				</Link>
 			</div>
 		</div>
