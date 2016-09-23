@@ -10,6 +10,9 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  twenty-sixteen-child
 */
+
+$desktop-side-nav-width: 280px; 
+
 body { 
 	margin: 0px; 
 }
@@ -60,6 +63,6 @@ body {
 	transition: left .6s ease-in-out; 
 
 	&.nav-open { 
-		left: 500px; 
+		left: $desktop-side-nav-width
 	}
 }

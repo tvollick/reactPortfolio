@@ -2,11 +2,14 @@
 	background-color: #9b59b6; 
 	padding: 15px; 
 	color: white;
+	position: relative; 
 	.side-nav-trigger { 
-		width: 100px; 
-		height: 100px; 
+		width: 80px; 
+		height: 80px; 
 		background-color: #27ae60; 
-		top: 30px; 
+		top: 15px;
+		left: 15px; 
+		position: absolute;  
 	}
 	.logo { 
 		display: block;

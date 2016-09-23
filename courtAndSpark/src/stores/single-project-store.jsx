@@ -5,7 +5,7 @@ var Api = require('../utils/api');
 module.exports = Reflux.createStore({
 	listenables: [Actions], 
 	getProjectById: function (id) { 
-		return Api.get('posts/'+id)
+		return Api.get('portfolio-api/'+id)
 			.then(function(json){
 				this.project = json; 
 				this.triggerChange(); 

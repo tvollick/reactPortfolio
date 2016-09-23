@@ -20,14 +20,14 @@ module.exports = React.createClass({
 				onClick={this.sideNavTrigger}
 				className="side-nav-trigger"
 			> 
-				
 			</div> 
-			<Link to="/">
-				<div className="logo">
-					Tyler Vollick
-				</div>
-			</Link>
-			{this.renderNavList()}
+			<div className="container-fixed"> 
+				<Link to="/">
+					<div className="logo">
+						Tyler Vollick
+					</div>
+				</Link>
+			</div>
 		</div>
 	}, 
 	renderNavList: function () { 
