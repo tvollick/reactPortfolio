@@ -2,11 +2,39 @@
 	background-color: #9b59b6; 
 	padding: 15px; 
 	color: white;
+	.side-nav-trigger { 
+		width: 100px; 
+		height: 100px; 
+		background-color: #27ae60; 
+		top: 30px; 
+	}
 	.logo { 
-		display: inline-block;
+		display: block;
+		float: left; 
 		padding: 15px; 
 		color: #fff; 
 		text-decoration: none; 
 		font-size: 36px; 
+	}
+
+	.nav {
+		list-style-type: none; 
+		padding-left: 0; 
+		float: right; 
+
+		> li { 
+			display: block; 
+			float: left; 
+			margin: 0 15px; 
+			padding: 15px; 
+
+			a { 
+				color: #fff; 
+
+				&.active { 
+					color: #2ecc71; 
+				}
+			}
+		}	
 	}
 }

@@ -1,0 +1,13 @@
+#side-nav{
+	width: 500px; 
+	background-color: #2ecc71; 
+	float: left; 
+	position: fixed; 
+	left: -500px; 
+	top: 0; 
+	bottom: 0; 
+	transition: left .6s ease-in-out; 
+}
+.main-container.nav-open #side-nav {
+	left: 0; 
+}

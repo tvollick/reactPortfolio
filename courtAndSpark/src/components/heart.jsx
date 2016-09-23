@@ -1,20 +1,30 @@
 var React = require('react'); 
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 module.exports = React.createClass({
 	getInitialState: function () { 
 		return {checkedClass:"unchecked"}
 	}, 
 	render: function () { 
-		return <div className="heart-page">
-			<div className="heart-svg-container"> 
-				{this.heartSVG()}
+		return <ReactCSSTransitionGroup
+				component="div"
+				transitionName="route"
+				transitionEnterTimeout={1500}
+				transitionLeaveTimeout={1500}
+				transitionAppear={true}
+				transitionAppearTimeout={600}
+		>
+			<div className="heart-page">
+				<div className="heart-svg-container"> 
+					{this.heartSVG()}
+				</div> 
+				<button 
+					onClick={this.handleButtonClick}
+				>
+					Heart Me 
+				</button> 
 			</div> 
-			<button 
-				onClick={this.handleButtonClick}
-			>
-				Heart Me 
-			</button> 
-		</div> 
+		</ReactCSSTransitionGroup> 
 	}, 
 	handleButtonClick: function () { 
 		if (this.state.checkedClass=="unchecked") { 

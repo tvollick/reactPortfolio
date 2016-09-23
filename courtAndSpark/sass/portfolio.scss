@@ -1,6 +1,5 @@
 $bp-tablet: 768px; 
 #portfolio { 
-	padding: 15px; 
 	background-color: #bdc3c7; 
 	transition: all .5s ease-in; 
 	min-height: 100vh; 
@@ -8,6 +7,9 @@ $bp-tablet: 768px;
 
 .portfolio-box { 
 	height: 500px; 
+	background-size: cover; 
+	background-position: center; 
+	background-repeat: no-repeat; 
 
 	.portfolio-info { 
 		padding: 30px; 

@@ -6,6 +6,7 @@ function child_theme_styles () {
 }
 function child_theme_scripts () {
 	wp_enqueue_script('reactAppJS', get_stylesheet_directory_uri().'/main.js', array(), false, true); 
+	wp_enqueue_script('tweenMax', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', array('jquery'), false, true); 
 }
 
 ?> 
