@@ -1,22 +1,44 @@
+$red: #e64c3c;
+$orange: #f29c1f; 
+$green: #25b99a; 
+$purple: #8e44ad; 
+$yellow: #f1c40f; 
+
 #banner-bg { 
 	height: 400px; 
 	padding-top: 60px; 
 	&.green-bg { 
-		background-color: #25b99a;
+		background-color: $green;
 	} 
 	&.red-bg { 
-		background-color: #e64c3c; 
+		background-color: $red; 
 	}
 	&.orange-bg { 
 		animation: to-orange 5s ease-in-out; 
 	}
 	&.orange-to-red-bg {
-		background-color: #e64c3c;
+		background-color: $red;
 		animation: orange-to-red 1s ease-in-out; 
 	}
+	&.red-to-orange-bg {
+		background-color: $orange;
+		animation: red-to-orange 1s ease-in-out; 
+	}
 	&.green-to-orange-bg { 
-		background-color: #f29c1f; 
+		background-color: $orange; 
 		animation: green-to-orange 1s ease-in-out; 
+	}
+	&.orange-to-green-bg { 
+		background-color: $green; 
+		animation: orange-to-green 1s ease-in-out; 
+	}
+	&.green-to-red-bg {
+		background-color: $red; 
+		animation: green-to-red 1s ease-in-out; 
+	}
+	&.red-to-green-bg {
+		background-color: $green; 
+		animation: red-to-green 1s ease-in-out; 
 	}
 	#banner { 
 		h2 { 
@@ -27,24 +49,68 @@
 }
 @keyframes orange-to-red {
 	0% { 
-		background-color: #f29c1f; 
+		background-color: $orange; 
 	}
 	50% { 
-		background-color: #8e44ad; 
+		background-color: $purple; 
 	}
 	100% {
-		background-color: #e64c3c;
+		background-color: $red;
+	}
+}
+@keyframes red-to-orange {
+	0% { 
+		background-color: $red; 
+	}
+	50% { 
+		background-color: $purple; 
+	}
+	100% {
+		background-color: $orange;
 	}
 }
 @keyframes green-to-orange { 
 	0% { 
-		background-color: #25b99a; 
+		background-color: $green; 
 	}
 	50% { 
-		background-color: #f1c40f; 
+		background-color: $purple; 
 	}
 	100% { 
- 		background-color: #f29c1f; 
+ 		background-color: $orange; 
+ 	}	
+}
+@keyframes orange-to-green { 
+	0% { 
+		background-color: $orange; 
+	}
+	50% { 
+		background-color: $purple; 
+	}
+	100% { 
+ 		background-color: $green; 
+ 	}	
+}
+@keyframes green-to-red { 
+	0% { 
+		background-color: $green; 
+	}
+	50% { 
+		background-color: $purple; 
+	}
+	100% { 
+ 		background-color: $red; 
+ 	}	
+}
+@keyframes red-to-green { 
+	0% { 
+		background-color: $red; 
+	}
+	50% { 
+		background-color: $purple; 
+	}
+	100% { 
+ 		background-color: $green; 
  	}	
 }
 @keyframes to-orange {
@@ -52,9 +118,9 @@
 
 	}
 	50% { 
-		background-color: #f1c40f; 
+		background-color: $purple; 
 	}
 	100% { 
- 		background-color: #f29c1f; 
+ 		background-color: $orange; 
  	}
 }

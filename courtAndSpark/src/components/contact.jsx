@@ -19,9 +19,9 @@ module.exports = React.createClass({
 				transitionEnterTimeout={1500}
 				transitionLeaveTimeout={1500}
 				transitionAppear={true}
-				transitionAppearTimeout={600}
+				transitionAppearTimeout={1000}
 		>
-			<div className="container-fixed">
+			<div className="container-fixed text-center">
 				<h1> Contact Page </h1> 
 			</div> 
 		</ReactCSSTransitionGroup> 

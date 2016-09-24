@@ -5,7 +5,7 @@ var Link = ReactRouter.Link;
 module.exports = React.createClass({
 	render: function () { 
 		return <li>
-			<Link to={"/"+this.props.dest} activeClassName="active"> 
+			<Link to={"/"+this.props.dest} activeClassName="active" className={this.props.color+"-link"}> 
 				{this.props.title}
 			</Link> 
 		</li> 

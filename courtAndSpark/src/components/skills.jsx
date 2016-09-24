@@ -22,13 +22,12 @@ module.exports = React.createClass({
 				transitionEnterTimeout={1500}
 				transitionLeaveTimeout={1500}
 				transitionAppear={true}
-				transitionAppearTimeout={600}
+				transitionAppearTimeout={1000}
 		>
-			<div className="container-fixed">
-				<div className="heart-page">
-					<div className="flow-chart-container"> 
-						{this.skillsSVG()}
-					</div> 
+			<div className="container-fixed text-center">
+				<h1> Skills </h1> 
+				<div className="flow-chart-container"> 
+					{this.skillsSVG()}
 				</div> 
 			</div> 
 		</ReactCSSTransitionGroup> 

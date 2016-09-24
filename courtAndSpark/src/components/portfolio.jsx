@@ -21,9 +21,11 @@ module.exports = React.createClass({
 				transitionEnterTimeout={1500}
 				transitionLeaveTimeout={1500}
 				transitionAppear={true}
-				transitionAppearTimeout={600}
+				transitionAppearTimeout={1000}
 			>
-			<h1> Work </h1> 
+			<div className="container-fixed text-center"> 
+				<h1> Work </h1> 
+			</div> 
 			<ProjectList /> 
 		</ReactCSSTransitionGroup> 
 	}, 

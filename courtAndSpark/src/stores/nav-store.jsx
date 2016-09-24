@@ -23,16 +23,13 @@ module.exports = Reflux.createStore({
 		this.appStates.bannerText = text; 
 		this.appStates.bgColor = color;
 		this.setColorClass(color);  
-		console.log(this.appStates.colorClass); 
 		this.trigger('change', this.appStates); 
 	}, 
 	setColorClass: function (newColor) { 
 		var prevColor = this.appStates.prevColor; 
 		if (newColor == this.appStates.prevColor) {
-			console.log('same color'); 
 			this.appStates.colorClass=prevColor; 
 		} else {
-			console.log('new color'); 
 			this.appStates.colorClass = prevColor + "-to-" + newColor; 
 			this.appStates.prevColor = newColor; 
 		}

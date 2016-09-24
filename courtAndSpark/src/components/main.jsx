@@ -48,8 +48,6 @@ module.exports = React.createClass({
 		}
 	}, 
 	onStoreChange: function (event, states) { 
-		console.log('herehere'); 
-		console.log(states.colorClass); 
 		this.setState({navOpen: states.navOpenState, bannerText: states.bannerText, bgColor: states.colorClass}); 
 	}	
 }); 

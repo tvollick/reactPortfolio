@@ -1,3 +1,8 @@
+$red: #e64c3c;
+$orange: #f29c1f; 
+$green: #25b99a; 
+$purple: #8e44ad; 
+$yellow: #f1c40f;
 .header { 
 	background-color: #fff; 
 	padding: 15px; 
@@ -10,11 +15,15 @@
 		top: 15px;
 		left: 15px; 
 		position: absolute;  
+		@media screen and (min-width: 768px) { 
+			display: none; 
+		}
 	}
+
 
 	.title { 
 		float: left; 
-
+		margin-top: 16px; 
 		.logo { 
 			display: inline; 
 			color: #333; 
@@ -34,6 +43,10 @@
 		list-style-type: none; 
 		padding-left: 0; 
 		float: right; 
+		display: none; 
+		@media screen and (min-width: 768px) { 
+			display: block; 
+		}
 
 		> li { 
 			display: block; 
@@ -44,6 +57,24 @@
 			a { 
 				color: #333; 
 				text-decoration: none; 
+				font-weight: 600; 
+				text-transform: uppercase; 
+
+				&.red-link {
+					&.active, &:hover {
+						color: $red; 
+					}
+				}
+				&.orange-link {
+					&.active, &:hover {
+						color: $orange; 
+					}
+				}
+				&.green-link {
+					&.active, &:hover {
+						color: $green; 
+					}
+				}
 
 				&.active { 
 					color: #2ecc71; 

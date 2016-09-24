@@ -11,16 +11,11 @@ module.exports = React.createClass({
 		Reflux.listenTo(navStore, 'onStoreChange')
 	], 
 	sideNavTrigger: function () { 
-		console.log('trigger'); 
 		Actions.toggleNavState(); 
 	}, 
 	render: function () { 
 		return <div className="header clearfix">
-			<div 
-				onClick={this.sideNavTrigger}
-				className="side-nav-trigger"
-			> 
-			</div> 
+			{this.renderSideNavTrigger()}
 			<div className="container-fixed"> 
 				<Link to="/">
 					<div className="title"> 
@@ -36,12 +31,24 @@ module.exports = React.createClass({
 			</div>
 		</div>
 	}, 
+	renderSideNavTrigger: function () { 
+		if (true) {
+			return <div 
+				onClick={this.sideNavTrigger}
+				className="side-nav-trigger"
+			> 
+			</div> 
+		} else {
+			return false; 
+		}
+
+	}, 
 	renderNavList: function () { 
 		return <div className="nav-container"> 
 			<ul className="nav clearfix">
-				<NavItem title="Work" dest="work" />
-				<NavItem title="Skills" dest="skills" /> 
-				<NavItem title="Contact" dest="contact" /> 
+				<NavItem title="Work" dest="work" color="green" />
+				<NavItem title="Skills" dest="skills" color="red" /> 
+				<NavItem title="Contact" dest="contact" color="orange" /> 
 			</ul> 
 		</div> 
 	}, 
