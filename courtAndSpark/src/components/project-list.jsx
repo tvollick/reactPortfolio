@@ -18,6 +18,7 @@ module.exports = React.createClass({
 		}
 	}, 
 	componentWillMount: function () { 
+		console.log("change banner"); 
 		Actions.getProjects(); 
 	},
 	componentDidMount: function () { 
@@ -25,7 +26,6 @@ module.exports = React.createClass({
 	}, 
 	renderProjects: function () {
 		return this.state.projects.map(function(project){
-			console.log(project); 
 				return <PortfolioBox
 					key={project.id}
 					{...project}

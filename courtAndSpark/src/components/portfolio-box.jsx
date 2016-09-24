@@ -45,7 +45,6 @@ module.exports = React.createClass({
 		var fieldArr = []; 
 		for (var property in acf) { 
 			if (acf.hasOwnProperty(property) && acf[property]) { 
-				console.log({name: property, val: this.props.acf[property]}); 
 				fieldArr.push({key: property, val: this.props.acf[property]}) ; 
 			}
 		}

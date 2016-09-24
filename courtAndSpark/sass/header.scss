@@ -1,5 +1,5 @@
 .header { 
-	background-color: #9b59b6; 
+	background-color: #fff; 
 	padding: 15px; 
 	color: white;
 	position: relative; 
@@ -17,14 +17,14 @@
 
 		.logo { 
 			display: inline; 
-			color: #fff; 
+			color: #333; 
 			text-decoration: none; 
 			font-size: 36px; 
 			line-height: 1em; 
 		}
 		.tagline { 
 			display: inline; 
-			color: #fff; 
+			color: #333; 
 			text-decoration: none; 
 			padding: 15px; 
 		}
@@ -42,7 +42,8 @@
 			padding: 15px; 
 
 			a { 
-				color: #fff; 
+				color: #333; 
+				text-decoration: none; 
 
 				&.active { 
 					color: #2ecc71; 

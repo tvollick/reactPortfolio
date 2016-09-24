@@ -2,24 +2,29 @@ var React = require('react');
 var Header = require('./header'); 
 var ProjectList = require('./project-list'); 
 var Portfolio = require('./portfolio'); 
-var Heart = require('./heart'); 
 var SideNav = require('./side-nav'); 
 var Reflux = require('reflux'); 
 var navStore = require('../stores/nav-store'); 
+var Banner = require('./banner'); 
 
 module.exports = React.createClass({
 	mixins: [
 		Reflux.listenTo(navStore, 'onStoreChange') 
 	], 
 	getInitialState:function () { 
-		return { navOpen: false}
+		return { navOpen: false, bannerText: "", bgColor: "green" }
 	}, 
 	render: function () {
 		return <div className={"main-container "+this.getNavState()}> 
 			<SideNav /> 
 			<div id="app-content">
 				<Header /> 
-				{this.content()}
+				<div id="banner-bg" className={this.state.bgColor+"-bg"}>
+					<Banner text={this.state.bannerText} /> 
+				</div> 
+				<div className="page-content"> 
+					{this.content()}
+				</div> 
 			</div> 
 		</div> 
 	}, 
@@ -37,12 +42,14 @@ module.exports = React.createClass({
 			// change his to home page. 
 
 			return <div> 
-				<Heart /> 
+
 				<Portfolio /> 
 			</div> 
 		}
 	}, 
-	onStoreChange: function (event, state) { 
-		this.setState({navOpen: state}); 
+	onStoreChange: function (event, states) { 
+		console.log('herehere'); 
+		console.log(states.colorClass); 
+		this.setState({navOpen: states.navOpenState, bannerText: states.bannerText, bgColor: states.colorClass}); 
 	}	
 }); 

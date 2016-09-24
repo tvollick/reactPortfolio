@@ -39,11 +39,16 @@
 
     &.line-1 { 
       stroke-dasharray: 220.4900016784668px; 
-      animation: linePipe1 3s ease infinite;
+      animation: linePipe1 10s ease infinite;
     }
     &#line-2 { 
       stroke-dasharray: 302.48996353149414px; 
-      animation: linePipe2 3s ease infinite;
+      animation: linePipe2 10s ease infinite;
+    }
+
+    &#line-3 { 
+      stroke-dasharray: 202.93066865130703px; 
+      animation: linePipe3 10s ease infinite;
     }
   }  
 }
@@ -52,7 +57,7 @@
   0% { 
     stroke-dashoffset: 220.4900016784668px;
   } 
-  100% { 
+  33% { 
     stroke-dashoffset: 0; 
   }
 }
@@ -60,7 +65,18 @@
   0% { 
     stroke-dashoffset: 302.48996353149414px;
   } 
-  100% { 
+  33% { 
+    stroke-dashoffset: 0; 
+  }
+}
+@keyframes linePipe3 { 
+  0% { 
+    stroke-dashoffset: 202.93066865130703px; 
+  } 
+  33% { 
+    stroke-dashoffset: 202.93066865130703px; 
+  }
+  66% { 
     stroke-dashoffset: 0; 
   }
 }

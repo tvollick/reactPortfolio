@@ -32,6 +32,7 @@ module.exports = React.createClass({
 						</span> 
 					</div> 
 				</Link>
+				{this.renderNavList()}
 			</div>
 		</div>
 	}, 
@@ -39,8 +40,8 @@ module.exports = React.createClass({
 		return <div className="nav-container"> 
 			<ul className="nav clearfix">
 				<NavItem title="Work" dest="work" />
+				<NavItem title="Skills" dest="skills" /> 
 				<NavItem title="Contact" dest="contact" /> 
-				<NavItem title="Hearts" dest="heart" /> 
 			</ul> 
 		</div> 
 	}, 
