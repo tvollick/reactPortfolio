@@ -1,6 +1,10 @@
 $desktop-side-nav-width: 280px; 
 
 #side-nav{
+
+	/* FIGURE OUT BETTER SOLUTION TO TURN ON AND OFF */ 
+	display: none; 
+
 	width: $desktop-side-nav-width; 
 	background-color:rgba(43, 48, 59, 1); 
 	float: left; 

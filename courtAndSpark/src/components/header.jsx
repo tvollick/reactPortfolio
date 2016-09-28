@@ -41,7 +41,6 @@ module.exports = React.createClass({
 		} else {
 			return false; 
 		}
-
 	}, 
 	renderNavList: function () { 
 		return <div className="nav-container"> 

@@ -18,6 +18,7 @@ module.exports = React.createClass({
 		return <ReactCSSTransitionGroup
 				component="div"
 				transitionName="route"
+				id="section-portfolio"
 				transitionEnterTimeout={1500}
 				transitionLeaveTimeout={1500}
 				transitionAppear={true}

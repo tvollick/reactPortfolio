@@ -23,6 +23,7 @@ module.exports = React.createClass({
 		>
 			<div className="container-fixed text-center">
 				<h1> Contact Page </h1> 
+				<h3> Contact Form will Go here </h3> 
 			</div> 
 		</ReactCSSTransitionGroup> 
 	}, 

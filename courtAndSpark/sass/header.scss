@@ -5,10 +5,13 @@ $purple: #8e44ad;
 $yellow: #f1c40f;
 .header { 
 	background-color: #fff; 
-	padding: 15px; 
 	color: white;
 	position: relative; 
 	.side-nav-trigger { 
+
+		/* TEMP */ 
+		display: none; 
+
 		width: 40px; 
 		height: 40px; 
 		background-color: #27ae60; 
@@ -20,10 +23,13 @@ $yellow: #f1c40f;
 		}
 	}
 
-
 	.title { 
-		float: left; 
+		padding: 5px; 
 		margin-top: 16px; 
+		@media screen and (min-width: 768px) {
+			float: left; 
+			padding: 0; 
+		}
 		.logo { 
 			display: inline; 
 			color: #333; 
@@ -38,48 +44,92 @@ $yellow: #f1c40f;
 			padding: 15px; 
 		}
 	}
-
+	.nav-container {
+		margin-top: 15px; 
+		@media (min-width: 768px) {
+			margin-top: 0; 
+		}
+	}
 	.nav {
 		list-style-type: none; 
 		padding-left: 0; 
-		float: right; 
-		display: none; 
-		@media screen and (min-width: 768px) { 
-			display: block; 
+		background-color: rgba(0,0,0,0.2); 
+		text-align: center;
+		margin: 0; 
+		@media screen and (min-width: 768px) {
+			float: right; 
+			text-align: right;
 		}
-
 		> li { 
-			display: block; 
-			float: left; 
-			margin: 0 15px; 
-			padding: 15px; 
+			display: inline-block; 
+			margin: 0; 
+			padding: 10px; 
+			@media (min-width: 768px) {
+				display: block; 
+				float: left;
+				margin: 0 15px; 
+			}
+
 
 			a { 
 				color: #333; 
 				text-decoration: none; 
 				font-weight: 600; 
 				text-transform: uppercase; 
+				display: inline-block;
+				padding: 5px; 
+				font-size: 14px; 
 
-				&.red-link {
-					&.active, &:hover {
-						color: $red; 
-					}
-				}
-				&.orange-link {
-					&.active, &:hover {
-						color: $orange; 
-					}
-				}
-				&.green-link {
-					&.active, &:hover {
-						color: $green; 
-					}
-				}
 
-				&.active { 
-					color: #2ecc71; 
+				@media (min-width: 768px) {
+					&.red-link {
+						&.active, &:hover {
+							color: $red; 
+						}
+					}
+					&.orange-link {
+						&.active, &:hover {
+							color: $orange; 
+						}
+					}
+					&.green-link {
+						&.active, &:hover {
+							color: $green; 
+						}
+					}
+
+					&.active { 
+						color: #2ecc71; 
+					}					
 				}
 			}
 		}	
 	}
+}
+#mobile-header { 
+	.header { 
+		.nav {
+			position: relative; 
+			> li {
+				padding: 0; 
+				width: 33%; 
+				float: left; 
+				&.green-li { 
+					background-color: $green; 
+				}
+				&.red-li { 
+					background-color: $red;  
+				}
+				&.orange-li { 
+					background-color: $orange; 
+				}
+				
+				> span { 
+					padding: 15px; 
+					display: block; 
+				}
+			}
+		}
+	}
+
 }
