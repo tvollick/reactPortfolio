@@ -16,7 +16,7 @@ module.exports = React.createClass({
 	render: function () { 
 		return <div className="header clearfix">
 			{this.renderSideNavTrigger()}
-			<div className="container-fixed"> 
+			<div className="container-fixed sm-no-padding"> 
 				<Link to="/">
 					<div className="title"> 
 						<div className="logo">
@@ -42,12 +42,16 @@ module.exports = React.createClass({
 			return false; 
 		}
 	}, 
+	handleNavClick: function () {
+		console.log('here'); 
+	}, 
 	renderNavList: function () { 
 		return <div className="nav-container"> 
 			<ul className="nav clearfix">
-				<NavItem title="Work" dest="work" color="green" />
-				<NavItem title="Skills" dest="skills" color="red" /> 
-				<NavItem title="Contact" dest="contact" color="orange" /> 
+				<li className={"active-nav-tab "+this.props.activeNavColor+"-bg"}></li>
+				<NavItem title="Work" dest="work" color="green" handleClick={this.handleNavClick}/>
+				<NavItem title="Skills" dest="skills" color="red" handleClick={this.handleNavClick}/> 
+				<NavItem title="Contact" dest="contact" color="orange" handleClick={this.handleNavClick}/> 
 			</ul> 
 		</div> 
 	}, 

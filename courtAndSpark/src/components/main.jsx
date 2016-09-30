@@ -16,7 +16,7 @@ module.exports = React.createClass({
 		Reflux.listenTo(navStore, 'onStoreChange') 
 	], 
 	getInitialState:function () { 
-		return { navOpen: false, bannerText: "", bgColor: "green", windowWidth: 0 }
+		return { navOpen: false, bannerText: "", bgColor: "blue1", windowWidth: 0 }
 	},
 	componentWillMount: function () {
 		this.updateDimensions(); 
@@ -29,10 +29,19 @@ module.exports = React.createClass({
 			<SideNav /> 
 			<Loader /> 
 			<div id="app-content">
-				
-
-				{this.mediaQuery()}
-
+				<Header activeNavColor={this.state.bgColor} /> 
+				<div className="banner-wrapper">
+					<div id="banner-bg" className={this.state.bgColor+"-bg"}>
+						<Banner text={this.state.bannerText} /> 
+					</div> 
+					<div id="sm-down-arrow-container">
+						<div id="sm-down-arrow" className={this.state.bgColor+"-bg"}>
+						</div>
+					</div>
+				</div>
+				<div className="page-content"> 
+					{this.content()}
+				</div> 
 			</div> 
 		</div> 
 	}, 
@@ -114,7 +123,7 @@ module.exports = React.createClass({
 		window.removeEventListener("resize", this.updateDimensions); 
 	}, 
 	onStoreChange: function (event, states) { 
-		this.setState({navOpen: states.navOpenState, bannerText: states.bannerText, bgColor: states.colorClass}); 
+		this.setState({navOpen: states.navOpenState, bannerText: states.bannerText, bgColor: states.bgColor}); 
 	}, 
 	updateDimensions: function () { 
 		var w = window, 

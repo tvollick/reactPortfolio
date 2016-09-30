@@ -3,15 +3,23 @@ $orange: #f29c1f;
 $green: #25b99a; 
 $purple: #8e44ad; 
 $yellow: #f1c40f;
+
+$blue1: #25b99a; 
+$blue2: #e64c3c; 
+$blue3: #f29c1f; 
+
 .header { 
 	background-color: #fff; 
 	color: white;
 	position: relative; 
+
+	.container-fixed > a {
+		text-decoration: none; 
+	}
 	.side-nav-trigger { 
 
 		/* TEMP */ 
 		display: none; 
-
 		width: 40px; 
 		height: 40px; 
 		background-color: #27ae60; 
@@ -26,6 +34,7 @@ $yellow: #f1c40f;
 	.title { 
 		padding: 5px; 
 		margin-top: 16px; 
+		font-family: 'Open Sans', sans-serif; 
 		@media screen and (min-width: 768px) {
 			float: left; 
 			padding: 0; 
@@ -38,6 +47,7 @@ $yellow: #f1c40f;
 			line-height: 1em; 
 		}
 		.tagline { 
+			font-family: 'Open Sans', sans-serif; 
 			display: inline; 
 			color: #333; 
 			text-decoration: none; 
@@ -51,9 +61,10 @@ $yellow: #f1c40f;
 		}
 	}
 	.nav {
+		position:relative;
 		list-style-type: none; 
 		padding-left: 0; 
-		background-color: rgba(0,0,0,0.2); 
+		// background-color: rgba(0,0,0,0.2); 
 		text-align: center;
 		margin: 0; 
 		@media screen and (min-width: 768px) {
@@ -61,10 +72,75 @@ $yellow: #f1c40f;
 			text-align: right;
 		}
 		> li { 
-			display: inline-block; 
+			display:block; 
 			margin: 0; 
-			padding: 10px; 
+			width: 33.33%; 
+			float: left;
+			&.green-li { 
+				background-color: $green; 
+			}
+			&.red-li { 
+				background-color: $red;  
+			}
+			&.orange-li { 
+				background-color: $orange; 
+			}
+			&.active-nav-tab {
+				position: absolute;
+				top: 0; 
+				left: 0; 
+				height: 100%; 
+				background-color: rgba(0,0,0,0.2); 
+				z-index: 1; 
+				transition: left 1s ease-in-out; 
+				@media (min-width: 768px) {
+					display: none; 
+				}
+				&.green-bg { 
+					background-color: $green;
+				} 
+				&.red-bg { 
+					background-color: $red; 
+				}
+				&.orange-bg { 
+					animation: to-orange 5s ease-in-out; 
+				}
+				&.orange-to-red-bg {
+					background-color: $red;
+					animation: orange-to-red 1s ease-in-out; 
+				}
+				&.red-to-orange-bg {
+					background-color: $orange;
+					animation: red-to-orange 1s ease-in-out; 
+				}
+				&.green-to-orange-bg { 
+					background-color: $orange; 
+					animation: green-to-orange 1s ease-in-out; 
+				}
+				&.orange-to-green-bg { 
+					background-color: $green; 
+					animation: orange-to-green 1s ease-in-out; 
+				}
+				&.green-to-red-bg {
+					background-color: $red; 
+					animation: green-to-red 1s ease-in-out; 
+				}
+				&.red-to-green-bg {
+					background-color: $green; 
+					animation: red-to-green 1s ease-in-out; 
+				}	
+			}
+
 			@media (min-width: 768px) {
+				float: none; 
+				width: initial; 
+				padding: 10px; 
+				&.green-li,
+				&.red-li,
+				&.orange-li { 
+					background-color: transparent; 
+				}
+
 				display: block; 
 				float: left;
 				margin: 0 15px; 
@@ -72,16 +148,19 @@ $yellow: #f1c40f;
 
 
 			a { 
+				position: relative; 
 				color: #333; 
 				text-decoration: none; 
 				font-weight: 600; 
 				text-transform: uppercase; 
 				display: inline-block;
-				padding: 5px; 
+				padding: 15px; 
 				font-size: 14px; 
-
-
+				color: #fff; 
+				z-index: 10; 
 				@media (min-width: 768px) {
+					color: #ddd; 
+					padding: 5px; 
 					&.red-link {
 						&.active, &:hover {
 							color: $red; 

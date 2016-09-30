@@ -1,126 +1,73 @@
-$red: #e64c3c;
-$orange: #f29c1f; 
-$green: #25b99a; 
-$purple: #8e44ad; 
-$yellow: #f1c40f; 
+$green: #3B97D3;
+$red: #1F5B83; 
+$orange: #0D2738;
+$purple:  #1F5B83; 
 
+$blue1: #3B97D3;
+$blue2: #1F5B83; 
+$blue3: #0D2738;
+
+
+
+.banner-wrapper { 
+	position: relative; 
+	transform: translateY(-1px); 
+}
 #banner-bg { 
-	height: 400px; 
-	padding-top: 60px; 
-	&.green-bg { 
-		background-color: $green;
-	} 
-	&.red-bg { 
-		background-color: $red; 
+	height: 35vh; 
+	min-height: 230px; 
+	padding-top: 30px; 
+	position: relative; 
+	z-index: 1; 
+	transition: height 1s ease-in-out, background-color 1s ease-in-out;  
+	&.blue1-bg { 
+		background-color: $blue1; 
 	}
-	&.orange-bg { 
-		animation: to-orange 5s ease-in-out; 
+	&.blue2-bg { 
+		background-color: $blue2; 
 	}
-	&.orange-to-red-bg {
-		background-color: $red;
-		animation: orange-to-red 1s ease-in-out; 
+	&.blue3-bg { 
+		background-color: $blue3; 
 	}
-	&.red-to-orange-bg {
-		background-color: $orange;
-		animation: red-to-orange 1s ease-in-out; 
-	}
-	&.green-to-orange-bg { 
-		background-color: $orange; 
-		animation: green-to-orange 1s ease-in-out; 
-	}
-	&.orange-to-green-bg { 
-		background-color: $green; 
-		animation: orange-to-green 1s ease-in-out; 
-	}
-	&.green-to-red-bg {
-		background-color: $red; 
-		animation: green-to-red 1s ease-in-out; 
-	}
-	&.red-to-green-bg {
-		background-color: $green; 
-		animation: red-to-green 1s ease-in-out; 
+	
+	@media (min-width: 768px) {
+		height: 400px;
+		padding-top: 60px; 
+
 	}
 	#banner { 
 		h2 { 
 			color: #fff;
-			font-size: 60px;  
+			font-size: 30px;  
+			font-weight: 300; 
+
+			@media (min-width: 768px) {
+				font-weight: 600; 
+				font-size: 60px; 
+			}
 		}
 	}
 }
-@keyframes orange-to-red {
-	0% { 
-		background-color: $orange; 
-	}
-	50% { 
-		background-color: $purple; 
-	}
-	100% {
-		background-color: $red;
-	}
+#sm-down-arrow-container { 
+	transform: rotateX(50deg); 
 }
-@keyframes red-to-orange {
-	0% { 
-		background-color: $red; 
+#sm-down-arrow { 
+	width: 70px; 
+	height: 70px;
+	transform: translateX(-50%) rotateZ(45deg);  
+	transform-origin: 50% 50%; 
+	position: absolute; 
+	bottom: -35px; 
+	left: 50%; 
+	z-index: 0; 
+	transition: background-color 1s ease-in-out; 
+	&.blue1-bg { 
+		background-color: $blue1; 
 	}
-	50% { 
-		background-color: $purple; 
+	&.blue2-bg { 
+		background-color: $blue2; 
 	}
-	100% {
-		background-color: $orange;
+	&.blue3-bg { 
+		background-color: $blue3; 
 	}
-}
-@keyframes green-to-orange { 
-	0% { 
-		background-color: $green; 
-	}
-	50% { 
-		background-color: $purple; 
-	}
-	100% { 
- 		background-color: $orange; 
- 	}	
-}
-@keyframes orange-to-green { 
-	0% { 
-		background-color: $orange; 
-	}
-	50% { 
-		background-color: $purple; 
-	}
-	100% { 
- 		background-color: $green; 
- 	}	
-}
-@keyframes green-to-red { 
-	0% { 
-		background-color: $green; 
-	}
-	50% { 
-		background-color: $purple; 
-	}
-	100% { 
- 		background-color: $red; 
- 	}	
-}
-@keyframes red-to-green { 
-	0% { 
-		background-color: $red; 
-	}
-	50% { 
-		background-color: $purple; 
-	}
-	100% { 
- 		background-color: $green; 
- 	}	
-}
-@keyframes to-orange {
-	0% { 
-
-	}
-	50% { 
-		background-color: $purple; 
-	}
-	100% { 
- 		background-color: $orange; 
- 	}
 }

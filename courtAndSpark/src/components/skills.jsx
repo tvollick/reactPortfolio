@@ -12,7 +12,7 @@ module.exports = React.createClass({
 		return {checkedClass:"unchecked"}
 	}, 
 	componentWillMount: function () {
-		Actions.changeBanner(this.bannerText, 'red'); 
+		Actions.changeBanner(this.bannerText, 'blue2'); 
 	}, 
 	bannerText: "Perpetually Learning.", 
 	render: function () { 

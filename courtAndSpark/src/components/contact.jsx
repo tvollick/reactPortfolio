@@ -9,7 +9,7 @@ module.exports = React.createClass({
 		Reflux.listenTo(NavStore, 'onStoreChange')
 	], 
 	componentWillMount: function () {
-		Actions.changeBanner(this.bannerText, 'orange'); 
+		Actions.changeBanner(this.bannerText, 'blue3'); 
 	}, 
 	bannerText: "Let’s Work Together.", 
 	render: function () {

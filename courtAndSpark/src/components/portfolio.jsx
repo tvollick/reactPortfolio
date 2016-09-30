@@ -11,9 +11,9 @@ module.exports = React.createClass({
 		Reflux.listenTo(NavStore, 'onStoreChange')
 	], 
 	componentWillMount: function () {
-		Actions.changeBanner(this.bannerText, 'green'); 
+		Actions.changeBanner(this.bannerText, 'blue1'); 
 	}, 
-	bannerText: "I climb mountains, build websites, and want to work for you.", 
+	bannerText: "I climb mountains, build websites, and...", 
 	render: function () { 
 		return <ReactCSSTransitionGroup
 				component="div"

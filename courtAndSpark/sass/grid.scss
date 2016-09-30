@@ -1,6 +1,12 @@
 .container-fixed { 
 	margin-left: auto; 
 	margin-right: auto; 
+	padding: 0 15px; 
+	@media (max-width: 767px) {
+		&.sm-no-padding {
+			padding: 0 0; 
+		}			
+	}
 }
 @media (min-width: 768px) {
 	.container-fixed {
